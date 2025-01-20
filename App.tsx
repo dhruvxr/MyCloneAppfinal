@@ -20,7 +20,21 @@ export default function App() {
         Connect with friends and the world around you on Instagram.
       </Text>
 
-
+{/* Login Form */}
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Phone number, username, or email"
+          style={styles.input}
+        />
+        <TextInput
+          placeholder="Password"
+          secureTextEntry={true}
+          style={styles.input}
+        />
+        <TouchableOpacity style={styles.loginButton}>
+          <Text style={styles.buttonText}>Log In</Text>
+        </TouchableOpacity>
+      </View>
 
       {/* Divider */}
       <View style={styles.dividerContainer}>
@@ -55,7 +69,29 @@ const styles = StyleSheet.create({
   },
   
 
+input: {
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 10,
+    backgroundColor: "#f9f9f9",
+  },
+  inputContainer: {
+    width: "100%",
+  },
+  loginButton: {
+    backgroundColor: "#3897f0",
+    borderRadius: 8,
+    padding: 12,
+    alignItems: "center",
+    marginBottom: 20,
+  },
 
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold",
+  },
   dividerContainer: {
     flexDirection: "row",
     alignItems: "center",
