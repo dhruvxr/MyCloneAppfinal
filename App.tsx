@@ -43,7 +43,17 @@ export default function App() {
         <View style={styles.divider} />
       </View>
 
+{/* Sign Up */}
+      <TouchableOpacity>
+        <Text style={styles.signupText}>Sign up for Instagram</Text>
+      </TouchableOpacity>
 
+      {/* Alert Button */}
+      <View style={styles.alertContainer}>
+        <TouchableOpacity style={styles.alertButton} onPress={showAlert}>
+          <Text style={styles.buttonText}>Alert</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -107,5 +117,21 @@ input: {
     marginHorizontal: 10,
     color: "#888",
   },
-
+alertContainer: {
+    width: "50%",
+    position: "absolute",
+    right: 120,
+    bottom: 0,
+  },
+  alertButton: {
+    backgroundColor: "#CC5801",
+    borderRadius: 20,
+    padding: 12,
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  signupText: {
+    color: "#3897f0",
+    fontWeight: "bold",
+  },
 });
